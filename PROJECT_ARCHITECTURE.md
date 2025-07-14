@@ -1,18 +1,17 @@
-
 # Project Architecture: Intelligent Knowledge Base Assistant with RAG
 
 ## 1. High-Level System Diagram
 
 ```mermaid
 graph TD
-    user[User] --> webui[WebUI (Gradio)]
-    webui --> backend[Backend (Python, LangChain)]
-    backend --> vectorstore[FAISS VectorStore]
+    user("User") --> webui("WebUI (Gradio)")
+    webui --> backend("Backend (Python, LangChain)")
+    backend --> vectorstore("FAISS VectorStore")
     vectorstore --> backend
-    backend --> llm[HuggingFace LLM]
+    backend --> llm("HuggingFace LLM")
     llm --> backend
     backend --> webui
-    knowledge[Knowledge Base (TXT, PDF, MD)] --> vectorstore
+    knowledge("Knowledge Base (TXT, PDF, MD)") --> vectorstore
 ```
 
 ---

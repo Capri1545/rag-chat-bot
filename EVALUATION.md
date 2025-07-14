@@ -52,25 +52,21 @@ This evaluation assesses the performance, accuracy, and reliability of the Intel
 
 ---
 
-## 4. Analysis & Discussion
 
+## 4. Key Observations
 
 **Strengths:**
-  - Consistently avoids hallucinations on out-of-KB queries.
-  - High accuracy and grounding for in-KB questions.
-  - Fast response for "no info" cases.
-  - Clear source display for transparency.
+- Consistently avoids hallucinations on out-of-KB queries.
+- High accuracy and grounding for in-KB questions.
+- Fast response for "no info" cases.
+- Clear source display for transparency.
 
 **Weaknesses:**
-  - Some partial retrieval for complex or ambiguous questions (e.g., partial context for the Great Red Spot).
-  - Chunking granularity may limit recall for very specific facts.
+- Occasional partial matches for ambiguous or multi-faceted questions.
+- Chunking granularity may limit recall for very specific facts.
 
-**Error Analysis:**
-  - No hallucinations observed. Occasional partial matches for ambiguous or multi-faceted questions.
-
-**Performance:**
-  - In-KB answers: ~3.5 seconds average.
-  - Out-of-KB answers: nearly instantaneous.
+**Summary:**
+The RAG Chatbot demonstrates robust, grounded question answering with zero hallucinations and high accuracy on in-KB queries. Out-of-KB queries are handled reliably with appropriate "I don't know" responses. Minor weaknesses include partial retrieval for complex questions and potential recall limitations due to chunking strategy.
 
 ---
 
