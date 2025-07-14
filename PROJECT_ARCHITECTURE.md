@@ -5,14 +5,14 @@
 
 ```mermaid
 graph TD
-    user["User"] -->|"Asks Question"| webui["WebUI (Gradio)"]
-    webui -->|"User Query"| backend["Backend (Python, LangChain)"]
-    backend -->|"Semantic Search"| vectorstore["FAISS VectorStore"]
-    vectorstore -->|"Relevant Chunks"| backend
-    backend -->|"Augmented Prompt"| llm["HuggingFace LLM"]
-    llm -->|"Generated Answer"| backend
-    backend -->|"Display Answer"| webui
-    knowledge["Knowledge Base (TXT, PDF, MD)"] -->|"Ingestion & Indexing"| vectorstore
+    user[User] --> webui[WebUI (Gradio)]
+    webui --> backend[Backend (Python, LangChain)]
+    backend --> vectorstore[FAISS VectorStore]
+    vectorstore --> backend
+    backend --> llm[HuggingFace LLM]
+    llm --> backend
+    backend --> webui
+    knowledge[Knowledge Base (TXT, PDF, MD)] --> vectorstore
 ```
 
 ---
