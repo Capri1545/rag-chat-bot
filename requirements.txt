@@ -1,0 +1,13 @@
+# python -m pip install --upgrade pip
+# Install the required packages for the project
+langchain
+langchain-community
+langchain-huggingface
+sentence-transformers
+faiss-cpu
+pypdf
+tiktoken
+gradio
+transformers
+pandas
+# Optional: faiss-gpu (if you have a compatible GPU)
