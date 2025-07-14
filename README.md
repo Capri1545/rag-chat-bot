@@ -198,8 +198,15 @@ Pull requests and issues are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) if 
 - **Overall Pass Rate:** [Yes/No]
 
 ### Key Observations
-- [Summarize strengths, e.g., "Consistently avoids hallucinations on out-of-KB queries."]
-- [Summarize weaknesses, e.g., "Occasional partial matches for ambiguous questions."]
+- **Strengths:**
+  - Consistently avoids hallucinations on out-of-KB queries.
+  - High accuracy and grounding for in-KB questions.
+  - Fast response for "no info" cases.
+  - Clear source display for transparency.
+
+- **Weaknesses:**
+  - Occasional partial matches for ambiguous or multi-faceted questions.
+  - Chunking granularity may limit recall for very specific facts.
 
 ---
 
