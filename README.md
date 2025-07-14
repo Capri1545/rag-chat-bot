@@ -210,25 +210,41 @@ Pull requests and issues are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) if 
 
 ---
 
-## 🚧 Challenges & Lessons Learned (Template)
+## 🚧 Challenges & Lessons Learned
 
-- **Model Loading & Resource Constraints:** [Describe any issues with large models, memory, etc.]
-- **Prompt Engineering:** [What worked, what didn't for grounding/hallucination mitigation.]
-- **Evaluation Design:** [Difficulties in creating fair/representative test sets.]
-- **Dependency Management:** [Any issues with library versions, deprecations, etc.]
-- **Other:** [Any other technical or project management challenges.]
+- **Model Loading & Resource Constraints:**
+  - No major issues with the selected embedding model (`all-MiniLM-L6-v2`) or LLMs (HuggingFacePipeline, local Ollama). All models ran efficiently on a modern CPU. Larger LLMs may require more memory or GPU for production-scale deployments.
+
+- **Prompt Engineering:**
+  - Careful prompt design and explicit instructions to the LLM were critical for grounding and hallucination mitigation. The use of a strict prompt template and retrieval thresholding worked well. Some prompt variants were less effective at avoiding hallucinations.
+
+- **Evaluation Design:**
+  - Creating a fair and representative test set required balancing in-KB and out-of-KB questions. Manual annotation was time-consuming but necessary for a full assessment. Ensuring coverage of ambiguous and edge-case queries was challenging.
+
+- **Dependency Management:**
+  - Some deprecation warnings (e.g., for HuggingFaceEmbeddings import) required code updates. Keeping all dependencies up to date and using a centralized `config.py` improved maintainability.
+
+- **Other:**
+  - UI polish and user experience improvements were iterative. Chunking granularity and retrieval threshold tuning required experimentation. Documentation and evaluation reporting took significant effort to reach portfolio quality.
 
 ---
 
-## 🔭 Future Work & Extensions (Template)
+## 🔭 Future Work & Extensions
 
-- **Multi-Document & Multi-Format Support:** [e.g., add support for more file types, larger KBs.]
-- **Advanced UI Features:** [e.g., chat history, user feedback, admin dashboard.]
-- **Model Upgrades:** [e.g., try more advanced LLMs, quantized models, or local deployment.]
-- **Retrieval Improvements:** [e.g., hybrid search, better chunking, metadata filtering.]
-- **Deployment:** [e.g., Dockerization, cloud deployment, CI/CD.]
-- **Security & Privacy:** [e.g., user authentication, data privacy.]
-- **Community Contributions:** [Encourage PRs, issues, and feature requests.]
+- **Multi-Document & Multi-Format Support:**
+  - Expand ingestion to support more file types (e.g., HTML, DOCX) and larger, more diverse knowledge bases.
+- **Advanced UI Features:**
+  - Add chat history, user feedback mechanisms, and an admin dashboard for monitoring usage and performance.
+- **Model Upgrades:**
+  - Integrate more advanced or quantized LLMs, support for local deployment, and experiment with open-source models as they improve.
+- **Retrieval Improvements:**
+  - Implement hybrid search (dense + keyword), improve chunking strategies, and add metadata filtering for more precise retrieval.
+- **Deployment:**
+  - Provide Dockerization, enable cloud deployment options, and set up CI/CD pipelines for automated testing and deployment.
+- **Security & Privacy:**
+  - Add user authentication, role-based access, and enhance data privacy for sensitive knowledge bases.
+- **Community Contributions:**
+  - Encourage pull requests, issues, and feature requests. Add contribution guidelines and templates to foster an open-source community.
 
 ---
 
