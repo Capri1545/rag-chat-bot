@@ -196,6 +196,7 @@ Pull requests and issues are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) if 
 - **Answer Accuracy:** Correct/Partially Correct (all in-KB)
 - **Grounding/Faithfulness:** Grounded (in-KB), Correctly No-Info (out-of-KB)
 - **Overall Pass Rate:** Yes (all questions)
+- **Overall Pass Rate:** Yes (all questions)
 
 ### Key Observations
 - **Strengths:**
