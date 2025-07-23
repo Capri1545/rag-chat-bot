@@ -1,7 +1,3 @@
-
-
-
-
 # --- Imports ---
 import gradio as gr
 from rag_pipeline import RAGPipeline
